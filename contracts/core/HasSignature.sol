@@ -11,8 +11,6 @@ contract HasSignature is Ownable {
     bytes32 hash,
     bytes memory signature
   ) public pure {
-    require(signer != address(0), "[BE] invalid signer");
-    require(signature.length == 65, "[BE] invalid signature length");
     bytes32 ethSignedMessageHash = ECDSA.toEthSignedMessageHash(hash);
 
     address recovered = ECDSA.recover(ethSignedMessageHash, signature);
