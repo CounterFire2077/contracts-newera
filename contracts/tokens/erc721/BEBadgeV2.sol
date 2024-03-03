@@ -25,7 +25,7 @@ contract BEBadgeV2 is Ownable, ERC721Enumerable, ERC721Burnable {
 
   /**
    * @dev Safely mints a new token and assigns it to the specified address.
-   * Only the account with the MINTER_ROLE can call this function.
+   * Only the account with the minter permission can call this function.
    * tokenId begin with 1. 
    * @param _to The address to which the newly minted token will be assigned.
    */
