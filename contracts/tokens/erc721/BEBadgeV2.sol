@@ -13,12 +13,13 @@ contract BEBadgeV2 is Ownable, ERC721Enumerable, ERC721Burnable {
   // ============ Events ============
   event MetaAddressUpdated(address indexed metaAddress);
   event MinterUpdated(address indexed minter, bool support);
-
+  
   constructor(
     string memory _name,
     string memory _symbol,
     uint256 _supplyLimt
   ) ERC721(_name, _symbol) {
+    require(_supplyLimt > 0, "Supply limit must be greater than 0");
     supplyLimit = _supplyLimt;
   }
 
