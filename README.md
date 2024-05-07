@@ -6,6 +6,7 @@
 contracts
     ├── activity
     │   └── NFTClaimer.sol  // Main logic for NFT claiming activity.
+    │   └── TreasureHunt.sol // Main logic for treasure hunt activity.
     ├── core
     │   └── HasSignature.sol // check signature
     ├── tokens
